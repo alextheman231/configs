@@ -2,12 +2,19 @@ import type { OxfmtConfig } from "oxfmt";
 
 import sortImports from "src/oxfmt/sortImports";
 
-const oxfmtConfigBase: OxfmtConfig = {
-  ignorePatterns: ["dist/**", "pnpm-lock.yaml"],
-  sortImports,
-  sortPackageJson: {
-    sortScripts: true,
-  },
-};
+interface OxfmtConfigBaseOptions {
+  ignore?: string | Array<string>;
+}
+
+function oxfmtConfigBase(options?: OxfmtConfigBaseOptions): OxfmtConfig {
+  const { ignore = ["dist/**", "pnpm-lock.yaml"] } = options ?? {};
+  return {
+    ignorePatterns: typeof ignore === "string" ? [ignore] : ignore,
+    sortImports,
+    sortPackageJson: {
+      sortScripts: true,
+    },
+  };
+}
 
 export default oxfmtConfigBase;
