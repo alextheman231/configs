@@ -150,6 +150,7 @@ function oxlintConfigBase(options?: OxlintConfigBaseOptions): OxlintConfig {
       "vitest/prefer-describe-function-title": "off",
       "vitest/prefer-importing-vitest-globals": "error",
       "vitest/require-mock-type-parameters": "off",
+      "vitest/valid-expect": ["error", { maxArgs: 2 }],
     },
   };
 }
