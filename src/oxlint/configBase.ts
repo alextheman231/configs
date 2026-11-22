@@ -1,6 +1,6 @@
 import type { OxlintConfig } from "oxlint";
 
-const configBase: OxlintConfig = {
+const oxlintConfigBase: OxlintConfig = {
   categories: {
     correctness: "error",
     suspicious: "error",
@@ -131,4 +131,4 @@ const configBase: OxlintConfig = {
   },
 };
 
-export default configBase;
+export default oxlintConfigBase;
