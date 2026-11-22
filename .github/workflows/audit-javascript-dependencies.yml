@@ -1,0 +1,20 @@
+name: Audit dependencies
+
+on:
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "**/pnpm-lock.yaml"
+
+jobs:
+  audit-javascript-dependencies:
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: alextheman231/github-actions/.github/workflows/audit-javascript-dependencies.yml@3afc74f099e74b1beb17ab72d17af1f20e47e0ca # v14.9.0
+    with:
+      pull-request-number: ${{ github.event.pull_request.number }}
+      node-version: 26
+      CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}

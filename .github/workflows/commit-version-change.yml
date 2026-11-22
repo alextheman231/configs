@@ -1,0 +1,42 @@
+name: Commit a version change
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  check-major-version:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@3afc74f099e74b1beb17ab72d17af1f20e47e0ca # v14.9.0
+    with:
+      CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
+      version-type: major
+      node-version: 26
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY}}
+
+  check-minor-version:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@3afc74f099e74b1beb17ab72d17af1f20e47e0ca # v14.9.0
+    with:
+      CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
+      version-type: minor
+      node-version: 26
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY}}
+
+  check-patch-version:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: alextheman231/github-actions/.github/workflows/commit-version-change.yml@3afc74f099e74b1beb17ab72d17af1f20e47e0ca # v14.9.0
+    with:
+      CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
+      version-type: patch
+      node-version: 26
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY}}

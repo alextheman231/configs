@@ -1,0 +1,10 @@
+savePrefix: ""
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - "@alextheman/*"
+  - alex-c-line
+  - "alextheman231/github-actions/*"
+overrides:
+  typescript: 6.0.3

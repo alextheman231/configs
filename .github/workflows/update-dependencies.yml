@@ -1,0 +1,23 @@
+name: Update Dependencies
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 9 * * 1
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-dependencies:
+    if: ${{ github.repository == 'alextheman231/utility' }}
+    uses: alextheman231/github-actions/.github/workflows/update-dependencies.yml@3afc74f099e74b1beb17ab72d17af1f20e47e0ca # v14.9.0
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}
+    with:
+      CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
+      update_pnpm: true
+      update_javascript_dependencies: true
+      update_actions: true
+      update_python_dependencies: true
+      node-version: 26

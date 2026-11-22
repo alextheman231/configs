@@ -1,0 +1,53 @@
+{
+  "name": "configs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsdown",
+    "build-configs": "tsdown --config tsdown.configs.config.ts",
+    "create-feature-docs": "typedoc",
+    "create-local-package": "pnpm run build && rm -f alextheman-utility-*.tgz && pnpm pack",
+    "create-release": "bash -c 'git pull origin main && alex-c-line template release-note create $@ --status \"Released\" --update-version' --",
+    "create-release-note": "bash -c 'git pull origin main && alex-c-line template release-note create $@' --",
+    "format": "pnpm run format-oxlint && pnpm run format-oxfmt && pnpm run format-markdownlint",
+    "format-oxlint": "oxlint --fix",
+    "format-markdownlint": "pnpm exec markdownlint-cli2 --fix \"**/*.md\" \"!{node_modules,dist}/**\" | grep -v \"^Finding:\"",
+    "format-oxfmt": "oxfmt \"./**/*.{ts,js,yml,yaml}\"",
+    "lint": "pnpm run lint-tsc && pnpm run lint-oxlint && pnpm run lint-markdownlint && pnpm run lint-oxfmt && pnpm run lint-pre-release",
+    "lint-oxlint": "oxlint",
+    "lint-markdownlint": "bash -o pipefail -c 'pnpm exec markdownlint-cli2 \"**/*.md\" \"!{node_modules,dist}/**\"| grep -v \"^Finding:\"'",
+    "lint-oxfmt": "oxfmt --check \"./**/*.{ts,js,yml,yaml}\"",
+    "lint-pre-release": "alex-c-line package-json check --rules no-pre-release-dependencies",
+    "lint-tsc": "tsc --noEmit",
+    "pre-commit": "pnpm run build-configs && alex-c-line pre-commit",
+    "prepare": "husky",
+    "update-dependencies": "pnpm update --latest && pnpm update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@12.21.0+sha512.66fd8278ee28935ce951792d34367ff3af5c432a2756445823029533835b8da529bbe0be5130afd56ed0713fb8789e47bad82d93bd5ae2fe54b15562d6276ef0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "alex-c-line": "2.18.2",
+    "husky": "9.1.7",
+    "markdownlint-cli2": "0.24.2",
+    "oxfmt": "0.79.0",
+    "tsdown": "0.23.7",
+    "typescript": "6.0.3"
+  },
+  "peerDependencies": {
+    "oxfmt": "0.79.0",
+    "oxlint": ">=1.94.0"
+  },
+  "peerDependenciesMeta": {
+    "oxlint": {
+      "optional": true
+    },
+    "oxfmt": {
+      "optional": true
+    }
+  }
+}
