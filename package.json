@@ -8,10 +8,15 @@
     "url": "git+https://github.com/alextheman231/configs.git"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs"
+    "./oxfmt": {
+      "import": "./dist/oxfmt/index.js",
+      "types": "./dist/oxfmt/index.d.ts",
+      "require": "./dist/oxfmt/index.cjs"
+    },
+    "./oxlint": {
+      "import": "./dist/oxlint/index.js",
+      "types": "./dist/oxlint/index.d.ts",
+      "require": "./dist/ixlint/index.cjs"
     }
   },
   "files": [

@@ -4,7 +4,7 @@ const config: Array<UserConfig> = [
   {
     clean: true,
     dts: true,
-    entry: ["src/index.ts"],
+    entry: ["src/oxfmt/index.ts", "src/oxlint/index.ts"],
     fixedExtension: false,
     format: ["esm", "cjs"],
   },
