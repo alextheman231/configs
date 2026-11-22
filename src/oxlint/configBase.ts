@@ -74,6 +74,7 @@ function oxlintConfigBase(options?: OxlintConfigBaseOptions): OxlintConfig {
       "func-style": ["error", "declaration"],
       "import/no-named-as-default": "off",
       "import/no-namespace": "error",
+      "import/no-unassigned-import": "off",
       "no-console": ["error", { allow: ["warn", "error", "info", "table"] }],
       "no-duplicate-imports": ["error", { allowSeparateTypeImports: true }],
       "no-lonely-if": "error",
