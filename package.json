@@ -40,9 +40,9 @@
     "typescript": "6.0.3"
   },
   "peerDependencies": {
-    "oxfmt": "0.79.0",
+    "oxfmt": ">=0.79.0",
     "oxlint": ">=1.94.0",
-    "oxlint-tsgolint": "7.0.2007"
+    "oxlint-tsgolint": ">=7.0.2007"
   },
   "peerDependenciesMeta": {
     "oxlint": {
