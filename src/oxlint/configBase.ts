@@ -14,11 +14,11 @@ export const defaultOptions = {
   sortObjectKeysInFiles: ["*.config.{js,ts}", "configs/**/*.{ts}"],
 } satisfies OxlintConfigBaseOptions;
 
-function oxlintConfigBase(options: OxlintConfigBaseOptions): OxlintConfig {
+function oxlintConfigBase(options?: OxlintConfigBaseOptions): OxlintConfig {
   const {
     denyRelativeImportsInFiles = defaultOptions.denyRelativeImportsInFiles,
     sortObjectKeysInFiles = defaultOptions.sortObjectKeysInFiles,
-  } = options;
+  } = options ?? {};
 
   return {
     categories: {
