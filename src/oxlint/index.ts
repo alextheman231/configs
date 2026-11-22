@@ -1,1 +1,1 @@
-export { default as configBase } from "src/oxlint/configBase";
+export { default as oxlintConfigBase } from "src/oxlint/configBase";
