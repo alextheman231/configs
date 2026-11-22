@@ -73,6 +73,8 @@
     "oxfmt": {
       "optional": true
     }
+  },
+  "dependencies": {
+    "@alextheman/utility": "5.32.2"
   }
 }
-
