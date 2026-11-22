@@ -83,6 +83,7 @@ function oxlintConfigBase(options?: OxlintConfigBaseOptions): OxlintConfig {
       "no-restricted-imports": ["error", baseRestrictedImports],
       "no-shadow": "off",
       "no-underscore-dangle": "off",
+      "no-unmodified-loop-condition": "off",
       "no-unused-vars": [
         "error",
         {
