@@ -1,4 +1,4 @@
-import { SortImportsUserConfig } from "oxfmt";
+import type { SortImportsUserConfig } from "oxfmt";
 
 const sortImports: SortImportsUserConfig = {
   customGroups: [
