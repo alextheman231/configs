@@ -9,15 +9,15 @@ interface OxlintConfigBaseOptions {
   sortObjectKeysInFiles?: string | Array<string>;
 }
 
-export const defaultOptions = {
+export const oxlintConfigBaseDefaultOptions = {
   denyRelativeImportsInFiles: "{src,tests}/**/*.{ts,tsx}",
   sortObjectKeysInFiles: ["*.config.{js,ts}", "configs/**/*.{ts}"],
 } satisfies OxlintConfigBaseOptions;
 
 function oxlintConfigBase(options?: OxlintConfigBaseOptions): OxlintConfig {
   const {
-    denyRelativeImportsInFiles = defaultOptions.denyRelativeImportsInFiles,
-    sortObjectKeysInFiles = defaultOptions.sortObjectKeysInFiles,
+    denyRelativeImportsInFiles = oxlintConfigBaseDefaultOptions.denyRelativeImportsInFiles,
+    sortObjectKeysInFiles = oxlintConfigBaseDefaultOptions.sortObjectKeysInFiles,
   } = options ?? {};
 
   return {
