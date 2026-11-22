@@ -1,3 +1,3 @@
-import { oxfmtConfigBase } from "./dist/index.js";
+import { oxfmtConfigBase } from "./dist/oxfmt/index.js";
 
 export default oxfmtConfigBase;

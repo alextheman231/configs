@@ -1,3 +1,3 @@
-import { oxlintConfigBase } from "./dist/index.js";
+import { oxlintConfigBase } from "./dist/oxlint/index.js";
 
 export default oxlintConfigBase;
