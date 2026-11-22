@@ -39,7 +39,7 @@
     "lint-oxfmt": "oxfmt --check \"./**/*.{ts,js,yml,yaml}\"",
     "lint-pre-release": "alex-c-line package-json check --rules no-pre-release-dependencies",
     "lint-tsc": "tsc --noEmit",
-    "pre-commit": "pnpm run build-configs && alex-c-line pre-commit",
+    "pre-commit": "alex-c-line pre-commit",
     "prepare": "husky",
     "update-dependencies": "pnpm update --latest && pnpm update"
   },
@@ -56,7 +56,7 @@
     "oxfmt": "0.79.0",
     "oxlint-tsgolint": "7.0.2007",
     "tsdown": "0.23.7",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "peerDependencies": {
     "oxfmt": ">=0.79.0",
@@ -78,4 +78,3 @@
     "@alextheman/utility": "5.32.2"
   }
 }
-
