@@ -26,5 +26,5 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true
   },
-  "include": ["src", "configs"]
+  "include": ["src", "configs"],
 }
