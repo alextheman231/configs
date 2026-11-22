@@ -4,7 +4,7 @@ import baseRestrictedImports from "src/oxlint/restrictedImports/baseRestrictedIm
 import sourceRestrictedImports from "src/oxlint/restrictedImports/sourceRestrictedImports";
 import combineRestrictedImports from "src/utility/combineRestrictedImports";
 
-interface OxlintConfigBaseOptions {
+export interface OxlintConfigBaseOptions {
   denyRelativeImportsInFiles?: string | Array<string>;
   sortObjectKeysInFiles?: string | Array<string>;
 }
