@@ -178,6 +178,9 @@ importers:
 
   .:
     dependencies:
+      '@alextheman/utility':
+        specifier: 5.32.2
+        version: 5.32.2(zod@4.6.7)
       oxlint:
         specifier: '>=1.94.0'
         version: 1.94.0(oxlint-tsgolint@7.0.2007)
@@ -211,6 +214,12 @@ packages:
 
   '@alextheman/utility@5.32.0':
     resolution: {integrity: sha512-riQAelZt1JxiPjR10R0xkgAmyeqswRl+aa5Yu2mqA8mtxsCQh8Z3lNAk+CnDvwgXPLFkHF5G+WmdoAmKsW9o5Q==}
+    engines: {node: '>=22.3.0'}
+    peerDependencies:
+      zod: '>=4.6.6'
+
+  '@alextheman/utility@5.32.2':
+    resolution: {integrity: sha512-zRTyQJ+sm73xbsB1Uk8Dxq3e14327HRAPy/idFU/J54o2n1LsAyN6fXU+xKpXdRW56CLWHl342tcRfl1SDxyTw==}
     engines: {node: '>=22.3.0'}
     peerDependencies:
       zod: '>=4.6.6'
@@ -944,6 +953,11 @@ packages:
     resolution: {integrity: sha512-YO/WfKYIPjJC/KIzlBeDBH/PMx9KxPP+nyKNqlupkKGwBhSP4MJ89mye3ybGYsX9GRHN3XsMx5aSX6BAaYYyDw==}
     engines: {node: '>= 16'}
 
+  dotenv@18.0.10:
+    resolution: {integrity: sha512-89FAA1xchzK2mxVWdr5F/0rldwiueXs6zJM86rO66EzekR1iBdiXRthyG+m5GvkJaFH3C2LESzamTkgndmLT2A==}
+    engines: {node: '>=12'}
+    hasBin: true
+
   dotenv@18.0.9:
     resolution: {integrity: sha512-3fVOW4cB02R066PUSwn8O4TJyz9NckQl7F81blIbaq9jKBm2tSmOKky7ZHIXzGvkVPXCSn6jkpziBPZdGFs8Tw==}
     engines: {node: '>=12'}
@@ -1641,6 +1655,12 @@ snapshots:
       execa: 10.2.1
       zod: 4.6.7
 
+  '@alextheman/utility@5.32.2(zod@4.6.7)':
+    dependencies:
+      dotenv: 18.0.10
+      execa: 10.2.1
+      zod: 4.6.7
+
   '@emnapi/core@2.0.0-beta.2':
     dependencies:
       '@emnapi/wasi-threads': 2.2.0
@@ -2158,6 +2178,8 @@ snapshots:
       dequal: 2.0.3
 
   dotenv-stringify@3.0.1: {}
+
+  dotenv@18.0.10: {}
 
   dotenv@18.0.9: {}
 
