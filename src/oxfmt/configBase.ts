@@ -6,8 +6,12 @@ interface OxfmtConfigBaseOptions {
   ignore?: string | Array<string>;
 }
 
+export const oxfmtConfigBaseDefaultOptions = {
+  ignore: ["dist/**", "pnpm-lock.yaml"],
+} satisfies OxfmtConfigBaseOptions;
+
 function oxfmtConfigBase(options?: OxfmtConfigBaseOptions): OxfmtConfig {
-  const { ignore = ["dist/**", "pnpm-lock.yaml"] } = options ?? {};
+  const { ignore = oxfmtConfigBaseDefaultOptions.ignore } = options ?? {};
   return {
     ignorePatterns: typeof ignore === "string" ? [ignore] : ignore,
     sortImports,
