@@ -7,6 +7,13 @@
     "type": "git",
     "url": "git+https://github.com/alextheman231/configs.git"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
