@@ -55,17 +55,3 @@ jobs:
       release-note-path: ${{ needs.check-release-note.outputs.release-note-path }}
     secrets:
       APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}
-
-  publish-github-pages:
-    permissions:
-      pages: write
-      id-token: write
-    needs: [create-github-release]
-    uses: alextheman231/github-actions/.github/workflows/publish-github-pages.yml@3afc74f099e74b1beb17ab72d17af1f20e47e0ca # v14.9.0
-    secrets:
-      APP_PRIVATE_KEY: ${{ secrets.ALEX_UP_BOT_PRIVATE_KEY }}
-    with:
-      CLIENT_ID: ${{ vars.ALEX_UP_BOT_CLIENT_ID }}
-      path: docs/features/html
-      build-configs: true
-      node-version: 26
