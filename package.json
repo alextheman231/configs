@@ -1,6 +1,6 @@
 {
   "name": "@alextheman/configs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -78,3 +78,4 @@
     "@alextheman/utility": "5.32.2"
   }
 }
+
