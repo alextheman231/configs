@@ -14,6 +14,7 @@ function oxlintConfigReactBase(options?: OxlintConfigBaseOptions): OxlintConfig 
     extends: [baseConfig],
     plugins: [...baseConfig.plugins, "react", "jsx-a11y"],
     rules: {
+      "react/no-unstable-nested-components": ["error", { allowAsProps: true }],
       "react/react-in-jsx-scope": "off",
     },
   };
