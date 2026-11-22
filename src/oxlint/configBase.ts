@@ -25,6 +25,7 @@ function oxlintConfigBase(options?: OxlintConfigBaseOptions): OxlintConfig {
       correctness: "error",
       suspicious: "error",
     },
+    ignorePatterns: ["**/dist/**"],
     options: {
       reportUnusedDisableDirectives: "error",
       typeAware: true,
