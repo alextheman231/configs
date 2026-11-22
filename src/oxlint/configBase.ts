@@ -71,6 +71,8 @@ const oxlintConfigBase: OxlintConfig = {
       },
     ],
     "node/no-sync": "error",
+    "object-shorthand": "error",
+    "prefer-destructuring": "error",
     "typescript/adjacent-overload-signatures": "off",
     "typescript/array-type": ["error", { default: "generic" }],
     "typescript/ban-ts-comment": [
