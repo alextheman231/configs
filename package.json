@@ -7,6 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/alextheman231/configs.git"
   },
+  "files": ["dist"],
   "scripts": {
     "build": "tsdown",
     "build-configs": "tsdown --config tsdown.configs.config.ts",
